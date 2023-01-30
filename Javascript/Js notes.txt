@@ -59,7 +59,8 @@ var string1 = printPersonProps(akash);
 var string2 = printPersonProps(muthu);
 
 Arrays:
-
+var a = [1,2,3];
+print(a[0]) // 0 based index
 
 
 
