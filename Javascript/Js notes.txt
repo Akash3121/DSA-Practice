@@ -1,3 +1,4 @@
+by harkirat, Js playlist
 better online IDE: ideone.com > choose javascript.
 to print:
 	print("Hello World");
@@ -8,3 +9,30 @@ var name = "King Ping";
 print(name);
 
 Conditional Statements:
+var gender = "male";
+if (gender == "male"){
+	print("mr");
+} else {
+	print("mrs");
+} 
+
+Functions:
+function getSuffix(gender) {
+	if(gender == "male") {
+		return "mr.";
+	} else {
+		return "mrs."
+	}
+}
+
+var g = "male";
+var name = "Akash";
+
+var finalString = getSuffix(g) + name;
+print(finalString);
+
+
+
+
+
+
