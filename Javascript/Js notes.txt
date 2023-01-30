@@ -31,6 +31,35 @@ var name = "Akash";
 var finalString = getSuffix(g) + name;
 print(finalString);
 
+Objects and Arrays:
+
+Objects:
+function printPersonProps(person){
+	print("hi this is ");
+	print(person.name);
+	print("and his age is ");
+	print(person.age);
+}
+
+var akash = {
+	name: "Akash",
+	age: 22,
+	profession: "soft-dev",
+	location: "banglore"
+};
+
+var muthu = {
+	name: "Muthu",
+	age: 35,
+	profession: "soft-dev",
+	location: "chennai"
+};
+
+var string1 = printPersonProps(akash);
+var string2 = printPersonProps(muthu);
+
+Arrays:
+
 
 
 
