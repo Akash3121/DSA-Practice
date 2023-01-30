@@ -1,0 +1,10 @@
+better online IDE: ideone.com > choose javascript.
+to print:
+	print("Hello World");
+
+variable:
+ #in Js there are no types like str, int while declaring, we can give var and then desired one
+var name = "King Ping";
+print(name);
+
+Conditional Statements:
