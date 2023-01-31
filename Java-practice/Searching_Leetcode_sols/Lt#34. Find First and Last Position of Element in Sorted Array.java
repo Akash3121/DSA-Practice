@@ -10,8 +10,10 @@ public class App {
     public static int[] searchRange(int[] nums, int target) {
         int[] ans = {-1, -1};
         ans[0] = binarySearch(nums, target, true);
-        ans[1] = binarySearch(nums, target, false) ;
-        return ans;
+        if (ans[0] != -1){//if ans[0] is -1 means no element is there, then why we need to check for the last index
+		ans[1] = binarySearch(nums, target, false) ;
+        }
+	return ans;
     }
 
     public static int binarySearch(int[] arr, int target, boolean firstIndex){
