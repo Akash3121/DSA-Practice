@@ -15,4 +15,16 @@ class Solution {
     }
 }
 
-//
+//O(n)
+class Solution {
+    public boolean checkIfExist(int[] arr) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int a : arr){ //n times
+            if (set.contains(a*2) || (a%2==0 && set.contains(a/2))){ //we are checking for even because if odd /2 gives even so wrong
+                return true;
+            }
+            set.add(a);
+        }
+    return false;
+    }
+}
