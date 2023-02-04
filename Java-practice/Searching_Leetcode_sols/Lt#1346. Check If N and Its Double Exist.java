@@ -1,5 +1,7 @@
 //1346. Check If N and Its Double Exist
 
+
+//o(n2)
 class Solution {
     public boolean checkIfExist(int[] arr) {
         // Arrays.sort(arr);
@@ -10,6 +12,7 @@ class Solution {
             }
         }
         return false;
-
     }
 }
+
+//
