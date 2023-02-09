@@ -41,6 +41,12 @@ public class FullySorted2DMatrixBS {
         int col = mat[0].length - 1; // becautious matrix may be empty
         int cMid = col / 2;
 
+	//before going through binary search check if only only 1 row is there then go fir binary search
+	// If this will not present, it will give error - Index out of bound for  input = {{1}}
+        if (row == 0){// only one row
+            return binarySearch(mat, target, row, 0, col);
+        }
+	
         // binary search for finalizing 2 rows
         int rStart = 0;
         int rEnd = row; 
