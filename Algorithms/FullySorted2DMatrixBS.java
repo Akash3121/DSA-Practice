@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 // Algorithm: (using 2 binary search) O(logn) {i.e., logn + 4logm}
-// first binary search, used to reduce rows, taking middle column(cMid) as mid to check with target
+// first binary search, used to reduce rows, taking middle column(cMid = col/2) as mid to check with target
 // then, we remain with 2 rows, check in that mid column with target, if target not present
 // then we have 4 cases:
 // 1 - first row(rStart) before mid
