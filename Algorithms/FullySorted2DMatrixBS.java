@@ -72,6 +72,7 @@ public class FullySorted2DMatrixBS {
         } else if (mat[rStart + 1][cMid] == target) {
             return new int[] { rStart + 1, cMid };
         }
+	//somewhat better approach is like, dont check the rStart, cMid & rStart + 1, cMid element with target, directly send as 4 binary search with these elements included.
 
         // now we need to check in these 2 rows before and after cMid
         // then we have 4 cases:
