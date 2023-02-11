@@ -40,3 +40,45 @@ class Solution {
         return td + 1; //+1 for last day
     }
 }
+
+
+//javascript
+/**
+ * @param {number[]} weights
+ * @param {number} days
+ * @return {number}
+ */
+var shipWithinDays = function(weights, days) {
+    let start =0;
+    let end = 0;
+
+    for(let i = 0; i < weights.length; i++){
+        start = Math.max(start, weights[i]);
+        end += weights[i];
+    }
+    
+    while (start <= end){
+        let mid = start + Math.floor((end - start) / 2); //in js Math.floor is needed for the end-start/2 one
+
+        let td = 0 //tempdate
+        let ts = 0; //tempsum
+
+        for(let i = 0; i < weights.length; i++){
+            if (ts + weights[i] <= mid){
+                ts += weights[i];
+            } else {
+                ts = weights[i];
+                td++;
+            }
+        }
+        td += 1; //for last day
+
+        if (td <= days){
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+
+    return start;
+};
