@@ -1,5 +1,7 @@
 //15. 3Sum
 
+
+//python
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         # logic is fixing the first element (n times) ant then using the two pointer
