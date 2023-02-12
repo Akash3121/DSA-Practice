@@ -4,7 +4,7 @@ class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         # Logic: creating a kSum function and passing value k = 4 as requirement is quadriples
         # a recursive kSum function in which reducing the k, if k == 2, the base case then it's two sum using two pointer
-        nums.sort() 
+        nums.sort()  #nlogn times
         res, quad = [], []
 
         def kSum(k, start, target): #not passing nums because nums can be accessibles inside the function and passing target because every time target reduces.
