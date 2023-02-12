@@ -3,7 +3,7 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++){ //n times
-            int k = binarySearch(nums, target - nums[i], i+1, nums.length-1);
+            int k = binarySearch(nums, target - nums[i], i+1, nums.length-1); //log n times
             if (k!= -1) return new int[] {i+1, k+1};
         }
         int[] a = {-1,-1};
