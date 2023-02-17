@@ -29,6 +29,33 @@ public class BubbleSort {
         System.out.println(Arrays.toString(arr));
         
     }
+    //improved version - added swapped boolean varible 
+    static void improvedBubble(int[] arr){
+        boolean swapped;
+        //run the loop n - 1 times 
+        for (int i = 0; i < arr.length; i++) {
+            swapped = false;
+            //for each step, max elem will come at last respective index
+            for (int j = 1; j < arr.length - i; j++) {
+                // compare 
+                //swap if the elem is smaller than previous item
+                if (arr[j] < arr[j - 1]){
+                    // swap
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                    swapped = true;
+                }
+            }
+            //one i iteration completed
+            // If you didn't swapped for a particular value of i, it means array is sorted
+            //so you can exit
+            if (!swapped){ // !false = trues so swapped == false
+                break;
+            }
+        }
+    }
+
 
     //normal swap 
     static void bubble(int[] arr){
@@ -45,7 +72,6 @@ public class BubbleSort {
                     arr[j - 1] = temp;
                 }
             }
-
         }
     }
 }
