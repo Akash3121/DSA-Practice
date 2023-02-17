@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //also known as Siniking sort, Exchange sort
 //swapping with the next adjacent element if first elem is greater than second elem
 //after first pass greatest elem is at end
@@ -15,3 +17,35 @@
     // If j doesn't swap any in i = 0, then it is swapped so for i = 0, iterating n - 1 elems {as j start from 1} -> so O(N)
 
 // Bubble sort is Stable sorting algorithm - means the order is maintained i.e., the exact element is in the sorted array.
+
+
+/**
+ * BubbleSort
+ */
+public class BubbleSort {
+    public static void main(String[] args) {
+        int[] arr = { 5,4,3,2,1};
+        bubble(arr);
+        System.out.println(Arrays.toString(arr));
+        
+    }
+
+    //normal swap 
+    static void bubble(int[] arr){
+        //run the loop n - 1 times 
+        for (int i = 0; i < arr.length; i++) {
+            //for each step, max elem will come at last respective index
+            for (int j = 1; j < arr.length - i; j++) {
+                // compare 
+                //swap if the elem is smaller than previous item
+                if (arr[j] < arr[j - 1]){
+                    // swap
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                }
+            }
+
+        }
+    }
+}
