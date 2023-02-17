@@ -12,4 +12,6 @@
     // worst cae - O(n^2) - sorted in reverse order
 
 //Best case: if j never swap a value for i, it means array is sorted, so you can end the program 
-            // If j doesn't swap any in i = 0, then it is swapped so for i = 0, iterating n elems -> so O(N)
+    // If j doesn't swap any in i = 0, then it is swapped so for i = 0, iterating n - 1 elems {as j start from 1} -> so O(N)
+
+// Bubble sort is Stable sorting algorithm - means the order is maintained i.e., the exact element is in the sorted array.
