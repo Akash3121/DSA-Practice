@@ -24,7 +24,7 @@ import java.util.Arrays;
  */
 public class InsertionSort {
     public static void main(String[] args) {
-        int[] arr = {3, 1,5,4,2};
+        int[] arr = {-3, 1,0,765,234,345,-2345,5,4,-2};
         insertionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -36,9 +36,16 @@ public class InsertionSort {
             for (int j = i + 1; j > 0; j--) {
                 //check with j-1 and swap
                 if (arr[j] < arr[j-1]){
+                    //swappning without temp
+                    arr[j] += arr[j-1];
+                    arr[j-1] = arr[j] - arr[j-1];
+                    arr[j] -= arr[j-1];
+                    /* swapping with temp
                     int temp = arr[j];
                     arr[j] = arr[j-1];
                     arr[j-1] = temp;
+
+                     */
                 } else{ //if elem j is not smaller than j-1 elem then it is alredy sorted so, not necessary to check
                     break;
                 }
