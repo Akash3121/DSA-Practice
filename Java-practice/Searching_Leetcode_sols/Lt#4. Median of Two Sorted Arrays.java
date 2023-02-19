@@ -1,6 +1,6 @@
 //4. Median of Two Sorted Arrays
 
-#python
+#python 
 #time - log(min(n, m)) {n,m because A, B}
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
