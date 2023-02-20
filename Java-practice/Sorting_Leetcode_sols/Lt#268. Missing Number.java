@@ -29,3 +29,14 @@ class Solution {
         return arr.length;
     }
 }
+
+//python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        #adding everything to sum and then checking i with nums[i]if equal then returns
+        # logic behind this is sum of numbers n*n+1/2
+        sum = len(nums)
+
+        for i in range(len(nums)):
+            sum += (i - nums[i])
+        return sum 
