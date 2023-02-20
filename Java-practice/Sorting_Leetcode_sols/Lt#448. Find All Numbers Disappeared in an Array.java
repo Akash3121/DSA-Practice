@@ -26,3 +26,9 @@ class Solution {
         return ans;
     }
 }
+
+#python
+class Solution:
+    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+        # logic: put elements from 1 to n in set and then remove the given set 
+        return set(range(1, len(nums)+1)) - set(nums)
