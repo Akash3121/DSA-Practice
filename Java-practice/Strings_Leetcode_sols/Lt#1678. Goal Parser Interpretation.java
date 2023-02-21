@@ -1,5 +1,6 @@
 //1678. Goal Parser Interpretation
 
+//Java
 class Solution {
     public String interpret(String command) {
         // Logic: loop through array skip ( if any other char add in res array if ) then check if index - 1 = ( then add o
