@@ -5,3 +5,12 @@ var defangIPaddr = function(address) {
     return address.split('.').join('[.]');
 };
 
+//java
+class Solution {
+    public String defangIPaddr(String address) {
+        return address.replace(".","[.]");
+    }
+}
+
+#python
+
