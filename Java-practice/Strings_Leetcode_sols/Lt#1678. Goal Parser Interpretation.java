@@ -21,3 +21,17 @@ class Solution {
         return ans;
     }
 }
+
+#Python
+class Solution:
+    def interpret(self, command: str) -> str:
+        return command.replace('()','o').replace('(al)','al')
+
+//Javascript
+/**
+ * @param {string} command
+ * @return {string}
+ */
+var interpret = function(command) {
+    return command.split("()").join("o").split("(al)").join("al");
+};
