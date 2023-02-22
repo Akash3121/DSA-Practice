@@ -10,3 +10,8 @@ class Solution:
             if (i != len(words) - 1):
                 ans += " "
         return ans 
+
+#python3
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return " ".join(word[::-1] for word in s.split(" ")) 
