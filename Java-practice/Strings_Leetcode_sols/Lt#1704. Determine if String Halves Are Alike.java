@@ -36,3 +36,22 @@ class Solution {
         return k == 'a' || k == 'e' || k == 'i' || k == 'o' || k == 'u';
     }
 }
+
+
+//Java
+class Solution {
+    public boolean halvesAreAlike(String s) {
+        int a = 0;
+        int b = 0;
+        String vowels = "aeiouAEIOU";
+        for (int i = 0; i < s.length()/2; i++){
+            if (vowels.contains(s.charAt(i)+"")){//+"" is for converting to string as vowels is string it will check for only string
+                a += 1;
+            }
+            if (vowels.contains(s.charAt(s.length()-i-1)+"")){
+                b += 1;
+            }
+        }
+        return a == b;
+    }
+}
