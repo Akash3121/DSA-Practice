@@ -13,3 +13,21 @@ class Solution {
         return s;
     }
 }
+
+#python
+class Solution:
+    def freqAlphabets(self, s: str) -> str:
+        # check for s[i+2] = "#" then s[i to i+1] is the values 
+        # else i is the value
+        res = []
+        i = 0
+        while i < len(s):
+            if i+2 < len(s) and s[i+2] == "#":
+                val = int(s[i:i+2])
+                res.append(chr(val + 96)) #+96 is for the a is 97 so 96 + the val
+                i += 3
+            else:
+                res.append(chr(int(s[i]) + 96))
+                i += 1
+
+        return ''.join(res)
