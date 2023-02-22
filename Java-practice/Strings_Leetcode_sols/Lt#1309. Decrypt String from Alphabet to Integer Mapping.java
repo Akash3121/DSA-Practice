@@ -31,3 +31,14 @@ class Solution:
                 i += 1
 
         return ''.join(res)
+
+#python3
+class Solution:
+    def freqAlphabets(self, s: str) -> str:
+        for i in range(26, 0, -1):
+            s = s.replace(str(i)+'#'*(i>9), chr(i + 96))
+            # '#' * (i>9) is for 
+            # if i > 9 the it is True '#' * True, here true is considered as 1 then '#'*1 is '#'
+            # else i <9 False then 0, '#' * 0 then 0
+        return s
+        
