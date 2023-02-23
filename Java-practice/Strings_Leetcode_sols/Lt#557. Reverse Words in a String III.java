@@ -1,6 +1,6 @@
 //557. Reverse Words in a String III
 
-#python
+#python3
 class Solution:
     def reverseWords(self, s: str) -> str:
         words = s.split()
