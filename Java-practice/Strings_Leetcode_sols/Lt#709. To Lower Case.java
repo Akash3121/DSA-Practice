@@ -10,7 +10,7 @@ class Solution:
                 arr[i] = chr(ord(arr[i]) + ord("a") - ord("A"))
         return "".join(arr)
 
-#python
+#python3
 class Solution:
     def toLowerCase(self, s: str) -> str:
         return s.lower()
