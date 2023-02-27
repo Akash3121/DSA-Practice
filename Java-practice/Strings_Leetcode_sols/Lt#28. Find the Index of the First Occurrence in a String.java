@@ -1,5 +1,29 @@
 //28. Find the Index of the First Occurrence in a String
 
+//sliding window
+class Solution {
+    public int strStr(String haystack, String needle) {
+        // tc: O(nm)
+        // sc: O(1)
+       //sliding window 
+       int m = needle.length();
+       int n = haystack.length();
+
+        //n times
+       for(int windowStart = 0; windowStart <= n - m; windowStart++){ //or < n-m+1
+           for (int i = 0; i < m; i++){ //m times
+               if (needle.charAt(i) != haystack.charAt(windowStart+i)){
+                   break;
+               }
+               if (i == m-1){ // last index also matched for needle(m)
+                return windowStart;
+               }
+           }
+       }
+       return -1; 
+    }
+}
+
 //Java
 class Solution {
     public int strStr(String haystack, String needle) {
