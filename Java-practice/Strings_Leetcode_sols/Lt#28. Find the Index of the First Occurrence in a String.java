@@ -1,6 +1,17 @@
 //28. Find the Index of the First Occurrence in a String
 
 //Java
+class Solution {
+    public int strStr(String haystack, String needle) {
+        String res = haystack.replaceFirst(needle, "*");
+        for(int i = 0; i < res.length(); i++){
+            if (res.charAt(i) == '*'){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
 
 //Java
 class Solution {
