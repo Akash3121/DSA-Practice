@@ -1,5 +1,7 @@
 //28. Find the Index of the First Occurrence in a String
 
+//KMP
+
 //sliding window
 class Solution {
     public int strStr(String haystack, String needle) {
