@@ -1,5 +1,6 @@
 //287. Find the Duplicate Number
 
+#python3
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
         # Inplace of sorting we can use cyclic sort so that time = O(N);
