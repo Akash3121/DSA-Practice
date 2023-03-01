@@ -39,3 +39,18 @@ class Solution:
 
 
         return prefix
+
+#python3
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        #Horizontal Algo: fixing the first string as prefix and checking with aother strings from 1 to length end if the string length till prefix length not matches then prefix last char is eliminated
+        prefix = strs[0]
+
+        for str in strs[1:]:
+            while str[:len(prefix)] != prefix:
+                prefix = prefix[:-1] #remove the last character
+
+                if not prefix:
+                    return ''
+        
+        return prefix
