@@ -26,3 +26,27 @@ class Solution {
         return true;
     }
 }
+
+//Go
+func checkPalindromeFormation(a string, b string) bool {
+    return combine(a, b) || combine(b, a);
+}
+
+func combine(a string, b string) bool{
+    for low, high := 0, len(a)-1; low < high; low, high = low+1, high-1 {
+		if a[low] != b[high] {
+			return isPalindrome(a[low:high+1]) || isPalindrome(b[low:high+1])
+		}
+	}
+	return true
+}
+   
+func isPalindrome(s string) bool{
+    for i, j := 0, len(s)-1 ;i < j; i,j = i+1, j-1{
+        if (s[i] != s[j]){
+            return false;
+        }
+    }
+    return true;
+}
+
