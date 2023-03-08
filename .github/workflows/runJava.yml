@@ -28,4 +28,6 @@ jobs:
         check-latest: true
 
     - run: pwd
+    - run: cd tree/main/Algorithms
+    - run: pwd
     - run: java CyclicSort.java
