@@ -22,3 +22,23 @@ class Solution:
         # so there are 2 cases we need to check ans * a with b and ans+1 * a with b if both are not satisfied then -1
         times = -(-len(b) // len(a)) # same as times = int(math.ceil(float(len(B)) / len(A)))
         return times * (b in (a * times)) or (times + 1) * (b in (a * (times + 1))) or -1
+
+//Java
+class Solution {
+    public int repeatedStringMatch(String a, String b) {
+        String copy = "";
+        int count = 0;
+        while (copy.length() < b.length()){
+            copy += a;
+            count ++;
+        }
+        // ONLY 2 cases to check 
+        if (copy.indexOf(b) >= 0){
+            return count;
+        }
+        if ((copy+a).indexOf(b) >= 0){
+            return ++count;
+        }
+        return -1;
+    }
+}
