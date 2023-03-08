@@ -27,6 +27,5 @@ jobs:
         distribution: 'temurin'
         check-latest: true
 
-    - run: 
-        pwd
-        java CyclicSort.java
+    - run: pwd
+    - run: java CyclicSort.java
