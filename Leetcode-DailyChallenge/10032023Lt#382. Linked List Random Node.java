@@ -27,3 +27,43 @@ class Solution:
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(head)
 # param_1 = obj.getRandom()
+
+
+//Java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+
+import java.util.Random;
+ 
+class Solution {
+    List<Integer> list;
+    ListNode head;
+    public Solution(ListNode head) {
+        //put all data from LL to list
+        ListNode start = head;
+        list = new ArrayList<>();
+        while (start != null){
+            list.add(start.val);
+            start = start.next;
+        }
+    }
+    
+    public int getRandom() {
+        Random random = new Random();
+        return list.get(random.nextInt(list.size()));
+    }
+}
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(head);
+ * int param_1 = obj.getRandom();
+ */
