@@ -39,3 +39,32 @@ class Solution {
         return q.isEmpty();
     }
 }
+
+#python3
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isCompleteTree(self, root: Optional[TreeNode]) -> bool:
+        if not root: return True
+
+        flag = False
+        q = [root]
+
+        while q:
+            node = q.pop(0)
+
+            if node is None:
+                flag = True
+                continue #first time
+            
+            if flag: #if num is b/w None
+                return False
+            
+            q.append(node.left)
+            q.append(node.right)
+        
+        return True
