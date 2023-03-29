@@ -13,3 +13,23 @@ class Solution:
                 break
             res += presum
         return res
+
+//Java
+class Solution {
+    public int maxSatisfaction(int[] satisfaction) {
+        Arrays.sort(satisfaction);
+        int n = satisfaction.length;
+
+        int presum = 0, sum = 0;
+
+        for (int i = n - 1; i >= 0; i--){
+            presum += satisfaction[i];
+
+            if (presum < 0){
+                break;
+            }
+            sum += presum;
+        }
+        return sum;
+    }
+}
