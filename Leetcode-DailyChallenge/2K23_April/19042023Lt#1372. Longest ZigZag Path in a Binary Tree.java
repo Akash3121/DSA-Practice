@@ -1,4 +1,5 @@
 //1372. Longest ZigZag Path in a Binary Tree
+
 # python3
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
