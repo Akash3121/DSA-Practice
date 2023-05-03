@@ -32,3 +32,29 @@ class Solution {
         return result;
     }
 }
+
+//Java
+class Solution {
+    public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+
+        for (int n: nums1){
+            set1.add(n);
+        }
+        for (int n: nums2){
+            set2.add(n);
+        }
+
+        List<Integer> ans1 = new ArrayList<>(set1);
+        List<Integer> ans2 = new ArrayList<>(set2);
+        ans1.removeAll(set2);
+        ans2.removeAll(set1);
+
+        result.add(ans1);
+        result.add(ans2);
+        return result;
+    }
+}
