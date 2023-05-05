@@ -33,3 +33,26 @@ class Solution {
         return ans;
     }
 }
+
+//Java
+class Solution {
+    //TC: k+n-k = n times => O(N)
+    //SC: O(1)
+    private int isVowel(char c){
+        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            return 1;
+        }
+        return 0;
+    }
+    public int maxVowels(String s, int k) {
+        int max_vow = 0, curr_vow = 0;
+        for(int i = 0; i < s.length(); i++){
+            curr_vow += isVowel(s.charAt(i));
+            if(i >= k){
+                curr_vow -= isVowel(s.charAt(i - k));
+            }
+            max_vow = Math.max(max_vow, curr_vow);
+        }
+        return max_vow;
+    }
+}
