@@ -14,3 +14,8 @@ async function sleep(millis) {
 
     return new Promise(response => setTimeout(response, millis));
 }
+
+#3
+async function sleep(millis) {
+    await new Promise((resolve, reject) => setTimeout(resolve, millis));
+}
