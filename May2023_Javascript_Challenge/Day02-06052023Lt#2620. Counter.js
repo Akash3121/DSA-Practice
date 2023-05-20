@@ -39,3 +39,11 @@ function createCounter(n: number): () => number {
         return ++n;
     }
 }
+
+#6 - Javascript
+var createCounter = function(n) {
+    --n;
+    return function() {
+        return ++n;
+    };
+};
