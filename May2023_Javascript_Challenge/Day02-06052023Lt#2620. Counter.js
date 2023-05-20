@@ -31,3 +31,11 @@ function createCounter(n: number): () => number {
         return n++;
     }
 }
+
+#5 - Typescript
+function createCounter(n: number): () => number {
+    --n;
+    return function() {
+        return ++n;
+    }
+}
