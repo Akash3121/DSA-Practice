@@ -15,3 +15,9 @@ var createHelloWorld = function() {
  * f(); // "Hello World"
  */
 
+#2 - Typescript
+function createHelloWorld() {
+	return function(...args): string {
+        return "Hello World";
+    };
+};
