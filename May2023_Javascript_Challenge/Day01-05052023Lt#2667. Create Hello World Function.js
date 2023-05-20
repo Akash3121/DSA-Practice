@@ -21,3 +21,8 @@ function createHelloWorld() {
         return "Hello World";
     };
 };
+
+#3 - Javascript
+var createHelloWorld = function() {
+    return () => "Hello World";
+};
