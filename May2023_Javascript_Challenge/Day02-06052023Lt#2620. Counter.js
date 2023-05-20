@@ -17,3 +17,10 @@ function createCounter(n: number): () => number {
         return currentCounter;
     }
 }
+
+#3 - Javascript
+var createCounter = function(n) {
+    return function() {
+        return n++;
+    };
+};
