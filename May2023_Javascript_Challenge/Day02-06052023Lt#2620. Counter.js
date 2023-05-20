@@ -52,3 +52,8 @@ var createCounter = function(n) {
 var createCounter = function(n) {
     return () => n++;
 };
+
+#8 - Typescript
+function createCounter(n: number): () => number {
+    return () => n++;
+}
