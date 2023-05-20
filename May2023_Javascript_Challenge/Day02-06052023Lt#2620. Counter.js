@@ -47,3 +47,8 @@ var createCounter = function(n) {
         return ++n;
     };
 };
+
+#7 - Javascript
+var createCounter = function(n) {
+    return () => n++;
+};
