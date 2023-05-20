@@ -24,3 +24,10 @@ var createCounter = function(n) {
         return n++;
     };
 };
+
+#4 - Typescript
+function createCounter(n: number): () => number {
+    return function() {
+        return n++;
+    }
+}
