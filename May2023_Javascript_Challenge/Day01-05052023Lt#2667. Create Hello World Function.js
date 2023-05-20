@@ -1,6 +1,6 @@
 //2667. Create Hello World Function
 
-#1
+#1 - Javascript
 /**
  * @return {Function}
  */
