@@ -1,4 +1,4 @@
-def bruteforce(nums, k): #O(n^2)
+def bruteforce(nums, k): #O(n^2) - didn't checked working 
     count = 0
     for i in range(len(nums)):
         pass
